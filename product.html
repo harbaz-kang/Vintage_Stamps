@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Stamps Co.</title>
+    <!-- linking external css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- linking external javascript-->
+    <script src="./js/scripts.js"></script>
+    <!-- adding favicon -->
+    <link rel="shortcut icon" href="./images/favicon.ico">
+
+    <!-- Internal CSS -->
+    <style>
+        /* Previous styles remain unchanged */
+
+        /* Styling images on the page */
+        .gallery-container {
+            display: flex;
+            /* flex-direction: column; */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 20px;
+            width: 80%;
+        }
+
+        .gallery img {
+            width: 80%;
+            border-radius: 5px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .display-options {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .display-options button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .display-options button:hover {
+            background-color: #555;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: left;
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+        }
+
+        .modal-content h2 {
+            color: #000;
+            font-family: Poppins;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        .modal-content .description {
+            color: #867E7E;
+            font-family: Poppins;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        .modal-content .info {
+            color: #000;
+            font-family: Poppins;
+            font-size: 15px;
+            font-style: normal;
+        }
+
+        .modalImg {
+            width: 45%;
+            margin-right: 30px;
+        }
+
+
+        /* Improved styling for product links */
+        .product a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        .product a:hover {
+            color: #4CAF50;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        /* Button styling */
+        .buy-button {
+            padding: 13px;
+            border: none;
+            cursor: pointer;
+            border-radius: 50px;
+            background: #0092E4;
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        /* Styling button when hovered over */
+        .buy-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Page-level Header-->
+    <header>
+        <!-- Navigation bar -->
+        <nav>
+            <div class="logo">
+                <h1>Vintage Stamps</h1>
+            </div>
+            <!-- div for links -->
+            <div class="menu">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./index.html#about">About</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+                <!-- Button -->
+            </div>
+            <div class="button">
+                <button>Sign In</button>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Page-level main content -->
+    <main class="productsMain">
+        <section class="products">
+            <!-- Text box 1 -->
+            <div class="hero-text">
+                <p>Discover the World of Stamps</p>
+                <h1>Our work Done right.</h1>
+            </div>
+            <!-- Text box 2 -->
+            <div class="hero-aside" style="width: 60%;">
+                <p>Explore our curated collection of exquisite stamps from around the world on our Buy Product page.
+                    Each stamp tells a unique story, making it a perfect addition to any collector's treasure trove.
+                    Start your journey into the fascinating world of philately and acquire your piece of history today
+                </p>
+            </div>
+        </section>
+
+        <!-- div containing function for displaying data of stamps -->
+        <div class="gallery-container" id="collection">
+            <div class="gallery" id="gallery-container">
+                <img onclick="openModal(1)" src="./images/Penny_black.jpg" alt="Stamp 1">
+                <img onclick="openModal(2)" src="./images/US_Airmail_inverted_Jenny_24c_1918_issue.jpg" alt="Stamp 2">
+                <img onclick="openModal(3)" src="./images/Mauritius_stamp.jpg" alt="Stamp 3">
+                <img onclick="openModal(4)" src="./images/Gul_tre_skilling_banco.jpg" alt="Stamp 4">
+                <img onclick="openModal(5)" src="./images/Modry_mauritius.jpg" alt="Stamp 5">
+                <img onclick="openModal(6)" src="./images/Mahatma_Gandhi_10_Rupees.jpg" alt="Stamp 6">
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modalImg">
+            <img src="penny-black.jpg" alt="Penny Black Stamp">
+        </div>
+        <div class="modal-content">
+            <h2>Penny Black (United Kingdom)</h2>
+            <p>The Penny Black, issued in 1840, is often considered the world's first adhesive postage stamp. It
+                features a profile of Queen Victoria.</p>
+            <p><strong>Usage:</strong> It was used for mailing letters within the United Kingdom.</p>
+            <p><strong>Price:</strong> The cost was one penny, regardless of the distance traveled.</p>
+            <button class="buy-button">Buy Now</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

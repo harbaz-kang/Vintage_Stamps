@@ -1,0 +1,278 @@
+/* Styling INDEX PAGE */
+/* Styling the entire body section */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: url("../images/background.svg"),
+    lightgray 0% 0% / 100px 100px repeat;
+}
+
+/* Styling the entire header section */
+header {
+  color: #fff;
+  padding: 20px 100px 20px 100px;
+  /*position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Adjust the z-index to ensure the header is above other elements */
+}
+
+/* styling navigation bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  color: #0092e4;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.menu ul li {
+  margin: 0 15px;
+}
+
+/* Styling links */
+.menu a {
+  text-decoration: none;
+  color: #000;
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* Styling the button */
+.button button {
+  border: 1px transparent solid;
+  border-radius: 39px;
+  width: 90px;
+  height: 30px;
+  background: #fff;
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.25);
+  color: #0092e4;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Style when button is hovered over */
+.button button:hover {
+  background-color: #45a049;
+  color: #ffffff;
+}
+
+.hero {
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  padding: 50px;
+  color: #000000;
+}
+
+.hero-text {
+  max-width: 500px;
+  margin-left: 60px;
+}
+
+.hero-text p {
+  color: #867e7e;
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.hero-text h1 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.hero-text button {
+  padding: 13px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+  background: #0092e4;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* Style when button is hovered over */
+.hero-text button:hover {
+  background-color: #45a049;
+}
+
+.hero-aside img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+  /* Applying Transitions on image */
+  transition: transform 0.3s ease-in-out;
+  transform: rotate(5deg);
+}
+
+/* Applying animation on image when hovered */
+.hero-aside img:hover {
+  transform: scale(1.1);
+}
+
+.content {
+  display: flex;
+  height: 300px;
+}
+
+.stampName {
+  background: #f9f9f9;
+  padding: 50px;
+}
+
+.stampDetail {
+  background: #0092e4;
+  padding: 50px;
+}
+
+.stampDetail p {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Styling the PRODUCT PAGE */
+.productsMain {
+  background-color: #fff;
+  margin-left: 30px;
+  min-height: 80vh;
+}
+
+.products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  color: #000000;
+}
+
+/* CSS for the CONTACT PAGE */
+.contactContent {
+  margin-top: 100px;
+}
+
+#feedback-form {
+  width: 280px;
+  margin: 0 auto;
+  background-color: #fcfcfc;
+  padding: 20px 50px 40px;
+  box-shadow: 1px 4px 10px 1px #aaa;
+  font-family: sans-serif;
+}
+
+#feedback-form * {
+  box-sizing: border-box;
+}
+
+#feedback-form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: Poppins;
+}
+
+#feedback-form input {
+  margin-bottom: 15px;
+  font-family: Poppins;
+}
+
+#feedback-form input[type="text"] {
+  display: block;
+  height: 32px;
+  padding: 6px 16px;
+  width: 100%;
+  border: none;
+  background-color: #f3f3f3;
+  font-family: Poppins;
+}
+
+#feedback-form label {
+  color: #777;
+  font-size: 0.8em;
+  font-family: Poppins;
+}
+
+#feedback-form input[type="checkbox"] {
+  float: left;
+}
+
+#feedback-form input:not(:checked) + #feedback-phone {
+  height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#feedback-form button {
+  display: block;
+  margin: 20px auto 0;
+  width: 150px;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+  color: #eee;
+  font-weight: 700;
+  box-shadow: 1px 4px 10px 1px #aaa;
+  background: #207cca; /* Old browsers */
+}
+
+/* Your existing styles for the fixed header and other elements */
+/* Styling footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo img {
+  max-height: 50px; /* Adjust the height as needed */
+}
+
+.footer-info {
+  text-align: right;
+}
+
+.footer-info p {
+  margin: 5px 0;
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+}
